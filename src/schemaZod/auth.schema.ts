@@ -6,8 +6,8 @@ export const RegiesterSchema = z.object({
         id:z.string({required_error:"id is required",invalid_type_error:"type is not allowed"}).min(2) ,
         name:z.string({required_error:"name is required",invalid_type_error:"type is not allowed"}).min(4),
 
-        type:z.nativeEnum(TypeEnum,{required_error:"type is required",invalid_type_error:"type is not allowed"}),
-        tickets:z.string({required_error:"ticket is required",invalid_type_error:"type is not allowed"}),
+        type:z.nativeEnum(TypeEnum),
+        tickets:z.number({required_error:"ticket is required",invalid_type_error:"ticket  is not allowed"}),
         price:z.number({required_error:"price is required",invalid_type_error:"type is not allowed"})
 
     })
